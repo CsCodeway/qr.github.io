@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2&family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #aeb8d9;
+}
+
+.container {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  /* min-height: 50px; */
+  max-height: 500px;
+  border-radius: 1.2rem;
+  background-color: white;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 1.2rem;
+}
+
+input {
+  padding: 0.7rem;
+  padding-bottom: 0.2rem;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgb(144, 144, 144);
+  font-size: 1rem;
+  font-family: "Baloo 2", cursive;
+  text-align: center;
+}
+
+button {
+  padding: 0.3rem 0.9rem;
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background-color: #6a8cfe;
+  color: white;
+  font-family: "Baloo 2", cursive;
+  cursor: pointer;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content img {
+  height: 120px;
+  width: 120px;
+  margin-bottom: 1rem;
+  border-radius: 0.3rem;
+  display: none;
+}
+
+#button-btn {
+  display: none;
+  text-align: center;
+  justify-content: center;
+  margin: 10px 0 10px 0;
+}
+
+#btn-cross {
+  margin: 0 1rem;
+  display: none;
+  cursor: pointer;
+}
+
+.button {
+  background-color: #2ea44f;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 6px 16px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.button:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+.button:hover {
+  background-color: #2c974b;
+}
+
+.button:focus {
+  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+  outline: none;
+}
+
+.button:disabled {
+  background-color: #94d3a2;
+  border-color: rgba(27, 31, 35, .1);
+  color: rgba(255, 255, 255, .8);
+  cursor: default;
+}
+
+.button:active {
+  background-color: #298e46;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}

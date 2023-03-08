@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=1.0, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <title>Qr - CsCodeway</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/phone.css" />
+    <link rel="shortcut icon" href="styles/favicon.ico" type="image/x-icon" />
+  </head>
+
+  <body>
+    <div class="container">
+      <form id="#form" class="top" autocomplete="off">
+        <input type="text" placeholder="Enter here..." id="search" />
+        <div button id="btn-cross" type="reset">╳</div>
+        <button type="submit" id="btn">Search</button>
+      </form>
+      <div class="content">
+        <img src="" id="img-qr" />
+      </div>
+      <div id="button-btn">
+        <button id="btn-download" class="button">Download</button>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+      let btn = document.getElementById("btn-cross");
+      let search = document.getElementById("search");
+
+      search.addEventListener("keyup", function () {
+        let searchSminput = search.value.length;
+        if (searchSminput == 0) {
+          btn.style.display = "none";
+        } else {
+          btn.style.display = "block";
+        }
+      });
+
+      btn.addEventListener("click", function () {
+        search.value = "";
+        btn.style.display = "none";
+        search.focus();
+      });
+    </script>
+  </body>
+</html>
